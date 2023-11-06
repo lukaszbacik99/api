@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bf1395f233dd71ab53279248eee2922b",
+    "content-hash": "94f5eb5d3f7df54869e94120bc6b896c",
     "packages": [
         {
             "name": "api-platform/core",
@@ -169,6 +169,45 @@
                 "source": "https://github.com/api-platform/core/tree/v3.2.4"
             },
             "time": "2023-11-06T08:14:18+00:00"
+        },
+        {
+            "name": "app/domain",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lukaszbacik99/domain.git",
+                "reference": "7b5320c1bf3bc4440c1b58715d9270134356a712"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lukaszbacik99/domain/zipball/7b5320c1bf3bc4440c1b58715d9270134356a712",
+                "reference": "7b5320c1bf3bc4440c1b58715d9270134356a712",
+                "shasum": ""
+            },
+            "require": {
+                "lbacik/value-object": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.6",
+                "squizlabs/php_codesniffer": "^3.7"
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "App\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Tests\\": "tests/"
+                }
+            },
+            "support": {
+                "source": "https://github.com/lukaszbacik99/domain/tree/main",
+                "issues": "https://github.com/lukaszbacik99/domain/issues"
+            },
+            "time": "2023-11-06T09:03:34+00:00"
         },
         {
             "name": "doctrine/cache",
@@ -1483,6 +1522,51 @@
                 "source": "https://github.com/doctrine/sql-formatter/tree/1.1.3"
             },
             "time": "2022-05-23T21:33:49+00:00"
+        },
+        {
+            "name": "lbacik/value-object",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lbacik/value-object.git",
+                "reference": "266c39310a6c20c7ec09599944e7e322cd45693b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lbacik/value-object/zipball/266c39310a6c20c7ec09599944e7e322cd45693b",
+                "reference": "266c39310a6c20c7ec09599944e7e322cd45693b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Sushi\\": "src/Sushi/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Łukasz Bacik",
+                    "email": "mail@luka.sh",
+                    "homepage": "https://github.com/lbacik/value-object"
+                }
+            ],
+            "description": "Simple Value Object implementation",
+            "support": {
+                "issues": "https://github.com/lbacik/value-object/issues",
+                "source": "https://github.com/lbacik/value-object/tree/v1.0"
+            },
+            "time": "2022-04-03T08:56:23+00:00"
         },
         {
             "name": "nelmio/cors-bundle",
@@ -5964,7 +6048,7 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
