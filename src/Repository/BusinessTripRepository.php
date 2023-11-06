@@ -45,7 +45,7 @@ class BusinessTripRepository extends ServiceEntityRepository implements Business
         DateTimeImmutable $endDateIsGreaterOrEqual,
         DateTimeImmutable $startDateIsLowerOrEqual
     ): int {
-        $result = $this->createQueryBuilder('b')
+        return $this->createQueryBuilder('b')
             ->select('count(b.id)')
             ->where('b.employee = :employeeId')
             ->andWhere('b.endDate >= :endDateIsGreaterOrEqual')
@@ -55,7 +55,15 @@ class BusinessTripRepository extends ServiceEntityRepository implements Business
             ->setParameter('startDateIsLowerOrEqual', $startDateIsLowerOrEqual)
             ->getQuery()
             ->getSingleScalarResult();
+    }
 
-        return $result;
+    public function getBusinessTripsByEmployeeId(int $employeeId): array
+    {
+        return $this->createQueryBuilder('b')
+            ->select('b.id, b.country, b.startDate, b.endDate, b.amountDue')
+            ->where('b.employee = :employeeId')
+            ->setParameter('employeeId', $employeeId)
+            ->getQuery()
+            ->getResult();
     }
 }
